@@ -25,18 +25,18 @@ function switchTurns() {
 
 
 var questions = [
-  {question: "Q1", answer: ["1A1", "1A2", "1A3"], correctAnswer: 0, correct: "CORRECT", is_img: true},
-  {question: "Q2", answer: ["2A1", "2A2", "2A3"], correctAnswer: 0, correct: "CORRECT"},
-  {question: "Q3", answer: ["3A1", "3A2", "3A3"], correctAnswer: 0, correct: "CORRECT"},
-  {question: "Q4", answer: ["4A1", "4A2", "4A3"], correctAnswer: 0, correct: "CORRECT"},
-  {question: "Q5", answer: ["5A1", "5A2", "5A3"], correctAnswer: 1, correct: "CORRECT"},
-  // {question: "Q6", answer: ["6A1", "6A2", "6A3"], correctAnswer: 1, correct: "CORRECT"},
-  // {question: "Q7", answer: ["7A1", "7A2", "7A3"], correctAnswer: 1, correct: "CORRECT"},
-  // {question: "Q8", answer: ["8A1", "8A2", "8A3"], correctAnswer: 1, correct: "CORRECT"},
-  // {question: "Q9", answer: ["9A1", "9A2", "9A3"], correctAnswer: 2, correct: "CORRECT"},
-  // {question: "Q10", answer: ["10A1", "10A2", "10A3"], correctAnswer: 2, correct: "CORRECT"},
-  // {question: "Q11", answer: ["11A1", "11A2", "11A3"], correctAnswer: 2, correct: "CORRECT"},
-  // {question: "Q12", answer: ["12A1", "12A2", "12A3"], correctAnswer: 2, correct: "CORRECT"},
+  {question: "Q1", answer: ["1A1", "1A2", "1A3"], correctAnswer: 0, is_img: true},
+  {question: "Q2", answer: ["2A1", "2A2", "2A3"], correctAnswer: 0},
+  {question: "Q3", answer: ["3A1", "3A2", "3A3"], correctAnswer: 0},
+  {question: "Q4", answer: ["4A1", "4A2", "4A3"], correctAnswer: 0},
+  {question: "Q5", answer: ["5A1", "5A2", "5A3"], correctAnswer: 1},
+  // {question: "Q6", answer: ["6A1", "6A2", "6A3"], correctAnswer: 1},
+  // {question: "Q7", answer: ["7A1", "7A2", "7A3"], correctAnswer: 1},
+  // {question: "Q8", answer: ["8A1", "8A2", "8A3"], correctAnswer: 1},
+  // {question: "Q9", answer: ["9A1", "9A2", "9A3"], correctAnswer: 2},
+  // {question: "Q10", answer: ["10A1", "10A2", "10A3"], correctAnswer: 2},
+  // {question: "Q11", answer: ["11A1", "11A2", "11A3"], correctAnswer: 2},
+  // {question: "Q12", answer: ["12A1", "12A2", "12A3"], correctAnswer: 2},
 ]
 var randomGenQuestions = Math.floor(Math.random() * questions.length);
 
