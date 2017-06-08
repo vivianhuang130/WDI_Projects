@@ -1,0 +1,162 @@
+
+.player1score {
+  height: 100px;
+  width: 100px;
+  background: blue;
+  margin-left: 175px;
+  margin-top: 40px;
+  display: inline-block;
+
+}
+
+.player2score{
+  height: 100px;
+  width: 100px;
+  background: pink;
+  margin-top: 40px;
+  margin-left: 145px;
+  display: inline-block;
+
+}
+.question{
+  margin-left: 175px;
+  display: inline-block;
+  background: rgba(180, 161, 235, 0.82);
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  width: 349px;
+  height: 300px;
+}
+.player1 img{
+  height: 80px;
+  width: 80px;
+  margin-left: 50px;
+  display: block;
+  /*float: left;*/
+  position: absolute;
+  bottom: 10px;
+}
+
+.player2 img{
+  height: 80px;
+  width: 80px;
+  margin-left: 580px;
+  display: block;
+  /*float: right;*/
+  position: absolute;
+  bottom: 10px;
+
+}
+/*.winner1 {
+  height: 20px;
+  width: 70px;
+  background: yellow;
+  margin-left: 50px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+}*/
+.winner1 img{
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+}
+/*.winner2{
+  height: 20px;
+  width: 70px;
+  background: yellow;
+  margin-left: 580px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+}*/
+.winner2 img{
+  height: 100px;
+  width: 100px;
+  margin-left: 580px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+}
+
+body{
+  background:gray;
+}
+#board {
+  width: 700px;
+  height: 550px;
+  border: 5px double #242424;
+  margin: 140px auto;
+  background-color: white;
+  position: relative;
+  /* //any children will position relative to this containder, if they are absolution*/
+
+}
+div #answers {
+  padding-top: 220px;
+}
+
+/*
+.players{
+  width: 100px;
+  height: 100px;
+  border: 4px solid #444444;
+  float: left;
+  text-align:center;
+  font-size: 100px;
+  line-height: 200px;
+}*/
+
+#p{
+  height: 240px;
+  width: 240px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto }
+}
+#p1{
+  height: 100px;
+  width: 100px;
+}
+#p2{
+  height: 100px;
+  width: 100px;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(84, 10, 116);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgba(173, 90, 240, 0.82);
+  /*float:right;*/
+}
+
+.button:hover {background-color: rgba(84, 10, 116, 0.82)}
+
+.button:active {
+  background-color: rgba(206, 152, 245, 0.82);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#clock {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: red;
+}
+
+.start {
+  width: 1000px;
+  height: 600px;
+  background: white;
+}
