@@ -30,13 +30,13 @@ var questions = [
   {question: "Q3", answer: ["3A1", "3A2", "3A3"], correctAnswer: 0, correct: "CORRECT"},
   {question: "Q4", answer: ["4A1", "4A2", "4A3"], correctAnswer: 0, correct: "CORRECT"},
   {question: "Q5", answer: ["5A1", "5A2", "5A3"], correctAnswer: 1, correct: "CORRECT"},
-  {question: "Q6", answer: ["6A1", "6A2", "6A3"], correctAnswer: 1, correct: "CORRECT"},
-  {question: "Q7", answer: ["7A1", "7A2", "7A3"], correctAnswer: 1, correct: "CORRECT"},
-  {question: "Q8", answer: ["8A1", "8A2", "8A3"], correctAnswer: 1, correct: "CORRECT"},
-  {question: "Q9", answer: ["9A1", "9A2", "9A3"], correctAnswer: 2, correct: "CORRECT"},
-  {question: "Q10", answer: ["10A1", "10A2", "10A3"], correctAnswer: 2, correct: "CORRECT"},
-  {question: "Q11", answer: ["11A1", "11A2", "11A3"], correctAnswer: 2, correct: "CORRECT"},
-  {question: "Q12", answer: ["12A1", "12A2", "12A3"], correctAnswer: 2, correct: "CORRECT"},
+  // {question: "Q6", answer: ["6A1", "6A2", "6A3"], correctAnswer: 1, correct: "CORRECT"},
+  // {question: "Q7", answer: ["7A1", "7A2", "7A3"], correctAnswer: 1, correct: "CORRECT"},
+  // {question: "Q8", answer: ["8A1", "8A2", "8A3"], correctAnswer: 1, correct: "CORRECT"},
+  // {question: "Q9", answer: ["9A1", "9A2", "9A3"], correctAnswer: 2, correct: "CORRECT"},
+  // {question: "Q10", answer: ["10A1", "10A2", "10A3"], correctAnswer: 2, correct: "CORRECT"},
+  // {question: "Q11", answer: ["11A1", "11A2", "11A3"], correctAnswer: 2, correct: "CORRECT"},
+  // {question: "Q12", answer: ["12A1", "12A2", "12A3"], correctAnswer: 2, correct: "CORRECT"},
 ]
 var randomGenQuestions = Math.floor(Math.random() * questions.length);
 
@@ -70,7 +70,7 @@ function setButtons() {
   }
 
   $('.btn').on('click', function() {
-    countDownTimer();
+
 
     if ($(this).hasClass('correct')) {
       if (currentPlayer === player1) {
@@ -84,19 +84,18 @@ function setButtons() {
         $('.player2scoreboard').text(player2.score);
 
       }
-      // switchTurns();
-        switchTurns();
-      newQuestion();
+      //   switchTurns();
+      // newQuestion();
     } else {
       alert('Wrong Answer!');
-      switchTurns();
-      newQuestion();
+      // switchTurns();
+      // newQuestion();
     }
   });
 }
 //start button
 function countDownTimer() {
-var seconds = 4;
+var seconds = 1;
 
 // Update the count down every 1 second
 var countDown = setInterval(function() {
@@ -109,8 +108,11 @@ var countDown = setInterval(function() {
     // If the count down is over, write some text
     if (seconds < 0) {
         clearInterval(countDown);
-
+        newQuestion()
+        switchTurns()
         document.getElementById("clock").innerHTML = "EXPIRED";
+        // seconds = 4
+        countDownTimer()
     }
 }, 1000);
 
@@ -130,6 +132,7 @@ $("#question-text").text(currentQuestion.question);
 } else {
   alert("player1 score:" + player1.score + ", player2 score:" + player2.score)
   winner();
+  clearInterval(countDown)
 }
 }
 
@@ -139,8 +142,10 @@ setButtons();
 function winner(){
   if(player1.score > player2.score){
     alert("Player 1 wins!");
-  } else {
+  } else if (player1.score < player2.score){
     alert("Player 2 wins!");
+  } else {
+    alert("It's a tie!")
   }
 }
 

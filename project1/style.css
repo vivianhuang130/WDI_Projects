@@ -159,4 +159,6 @@ div #answers {
   width: 1000px;
   height: 600px;
   background: white;
+  position: absolute;
+  z-index: 1;
 }
