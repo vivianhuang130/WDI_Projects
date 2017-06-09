@@ -75,12 +75,12 @@ function setButtons() {
     if ($(this).hasClass('correct')) {
       if (currentPlayer === player1) {
         player1.score += 1;
-
+        $( ".cup1" ).animate({ "top": "-=50px" }, "slow" )
         $('.player1scoreboard').text(player1.score);
 
       } else {
         player2.score += 1;
-
+        $( ".cup2" ).animate({ "top": "-=50px" }, "slow" )
         $('.player2scoreboard').text(player2.score);
 
       }
