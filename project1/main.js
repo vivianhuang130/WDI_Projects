@@ -29,10 +29,10 @@ var questions = [
   {question: "6 + 2 / 2 * 3", answer: ["9", "12", "1.33"], correctAnswer: 0},
   {question: "In HTML, anchor tags create ", answer: ["links", "blocks of text", "a title for the document"], correctAnswer: 0},
   {question: "In CSS, which font property is used to adjust the thickness of the selected text ", answer: ["font-weight", "font-style", "text-transform"], correctAnswer: 0},
-  {question: "Inline elements", answer: ["are the same as block elements.", "cannot have height or width assigned.", "tells the web browser what type of HTML the page uses"], correctAnswer: 1},
+  {question: "Inline elements", answer: ["are the same as block elements", "cannot have height or width assigned", "tells the web browser what type of HTML the page uses"], correctAnswer: 1},
   {question: "CSS is an acronym for", answer: ["Cascading Sheets Style", "Cascading Style Sheets", "Cascade Styling Sheets"], correctAnswer: 1},
   {question: "tag for adding an image or video", answer: ["H1 {color: red}", "<img src=", "{img(url): }"], correctAnswer: 1},
-  {question: "Clears are used when we want to ", answer: ["turn on floating.", "turn off floating.", "change the font-size."], correctAnswer: 1},
+  {question: "Clears are used when we want to ", answer: ["turn on floating", "turn off floating", "change the font-size"], correctAnswer: 1},
   {question: "Which answer is not a falsey value? ", answer: ["null", "0", "All number except 0"], correctAnswer: 2},
   {question: "While Loops can run indefinitely when the condition remains", answer: ["false", "neutral", "true"], correctAnswer: 2},
   {question: "What is an Array?", answer: ["similar to a local scope", "A loop", "An ordered list of values"], correctAnswer: 2},
@@ -136,7 +136,7 @@ $("#question-text").text(currentQuestion.question);
   setButtons()
 
 } else {
-  alert("player1 score:" + player1.score + ", player2 score:" + player2.score)
+  alert("Player 1 score:" + player1.score + ", player 2 score:" + player2.score)
   winner();
   clearInterval(countDown)
 }
