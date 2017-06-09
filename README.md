@@ -10,7 +10,6 @@ Two players take turns answering questions.
 
 Play Cupcake Pop Quiz [here](https://vivianhuang130.github.io/WDI_Projects/project1)
 
-
 ---
 
 ### Development & Technologies
@@ -23,7 +22,7 @@ Cupcake Pop Quiz was built using HTML, CSS, JavaScript, and the jQuery library.
 
 + Started with the start button to start the game.
 + Created a timer, a score tracker, and a moving icon that is linked to the player's score.
-+ Game ends after all 11 questions are answered. 
++ Game ends after all 11 questions are answered.
 + Player with highest score wins.
 
 ---
@@ -40,6 +39,3 @@ Cupcake Pop Quiz was built using HTML, CSS, JavaScript, and the jQuery library.
 ### Credit where credit is due
 
 Questions taken from GA prepwork and quizlet.
-
-
-
