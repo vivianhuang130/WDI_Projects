@@ -2,7 +2,7 @@
 .player1score {
   height: 100px;
   width: 100px;
-  background: blue;
+  background: #87CEFA;
   margin-left: 175px;
   margin-top: 40px;
   display: inline-block;
@@ -14,7 +14,7 @@
   width: 100px;
   background: pink;
   margin-top: 40px;
-  margin-left: 145px;
+  margin-left: -12px;
   display: inline-block;
 
 }
@@ -24,6 +24,7 @@
   background: rgba(180, 161, 235, 0.82);
   margin-top: 20px;
   color: white;
+  font-size: 20px;
   text-align: center;
   width: 349px;
   height: 300px;
@@ -127,6 +128,12 @@ div #answers {
   height: 100px;
   width: 100px;
 }
+#find {
+  margin-left: 250px;
+margin-top: 250px;
+font-size: 60px;
+}
+}
 .button {
   padding: 15px 25px;
   font-size: 10px;
@@ -152,7 +159,8 @@ div #answers {
   display: inline-block;
   height: 100px;
   width: 100px;
-  background: red;
+  font-size: 40px;
+  margin-left: 53px;
 }
 
 .start {
@@ -161,4 +169,5 @@ div #answers {
   background: white;
   position: absolute;
   z-index: 1;
+  margin: 0px 82px
 }

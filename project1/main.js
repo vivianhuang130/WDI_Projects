@@ -25,18 +25,18 @@ function switchTurns() {
 
 
 var questions = [
-  {question: "Q1", answer: ["1A1", "1A2", "1A3"], correctAnswer: 0, is_img: true},
-  {question: "Q2", answer: ["2A1", "2A2", "2A3"], correctAnswer: 0},
-  {question: "Q3", answer: ["3A1", "3A2", "3A3"], correctAnswer: 0},
-  {question: "Q4", answer: ["4A1", "4A2", "4A3"], correctAnswer: 0},
-  {question: "Q5", answer: ["5A1", "5A2", "5A3"], correctAnswer: 1},
-  // {question: "Q6", answer: ["6A1", "6A2", "6A3"], correctAnswer: 1},
-  // {question: "Q7", answer: ["7A1", "7A2", "7A3"], correctAnswer: 1},
-  // {question: "Q8", answer: ["8A1", "8A2", "8A3"], correctAnswer: 1},
-  // {question: "Q9", answer: ["9A1", "9A2", "9A3"], correctAnswer: 2},
-  // {question: "Q10", answer: ["10A1", "10A2", "10A3"], correctAnswer: 2},
-  // {question: "Q11", answer: ["11A1", "11A2", "11A3"], correctAnswer: 2},
-  // {question: "Q12", answer: ["12A1", "12A2", "12A3"], correctAnswer: 2},
+  // {question: "6 + 12 / 4 + 2", answer: ["11", "3", "4.7"], correctAnswer: 0},
+  {question: "6 + 2 / 2 * 3", answer: ["9", "12", "1.33"], correctAnswer: 0},
+  {question: "In HTML, anchor tags create ", answer: ["links", "blocks of text", "a title for the document"], correctAnswer: 0},
+  {question: "In CSS, which font property is used to adjust the thickness of the selected text ", answer: ["font-weight", "font-style", "text-transform"], correctAnswer: 0},
+  {question: "Inline elements", answer: ["are the same as block elements.", "cannot have height or width assigned.", "tells the web browser what type of HTML the page uses"], correctAnswer: 1},
+  {question: "CSS is an acronym for", answer: ["Cascading Sheets Style", "Cascading Style Sheets", "Cascade Styling Sheets"], correctAnswer: 1},
+  {question: "tag for adding an image or video", answer: ["H1 {color: red}", "<img src=", "{img(url): }"], correctAnswer: 1},
+  {question: "Clears are used when we want to ", answer: ["turn on floating.", "turn off floating.", "change the font-size."], correctAnswer: 1},
+  {question: "Which answer is not a falsey value? ", answer: ["null", "0", "All number except 0"], correctAnswer: 2},
+  {question: "While Loops can run indefinitely when the condition remains", answer: ["false", "neutral", "true"], correctAnswer: 2},
+  {question: "What is an Array?", answer: ["similar to a local scope", "A loop", "An ordered list of values"], correctAnswer: 2},
+  {question: "Which of the following answers is an object?", answer: ["{color= purple};", "{color- purple};", "{color: purple};"], correctAnswer: 2},
 ]
 var randomGenQuestions = Math.floor(Math.random() * questions.length);
 
@@ -75,13 +75,19 @@ function setButtons() {
     if ($(this).hasClass('correct')) {
       if (currentPlayer === player1) {
         player1.score += 1;
-        $( ".cup1" ).animate({ "top": "-=50px" }, "slow" )
+
         $('.player1scoreboard').text(player1.score);
+        $( ".cup1" ).animate({ "top": "-=50px" }, "slow" )
+        newQuestion()
+        switchTurns()
 
       } else {
         player2.score += 1;
-        $( ".cup2" ).animate({ "top": "-=50px" }, "slow" )
+
         $('.player2scoreboard').text(player2.score);
+        $( ".cup2" ).animate({ "top": "-=50px" }, "slow" )
+        newQuestion()
+        switchTurns()
 
       }
       //   switchTurns();
@@ -95,7 +101,7 @@ function setButtons() {
 }
 //start button
 function countDownTimer() {
-var seconds = 1;
+var seconds = 6;
 
 // Update the count down every 1 second
 var countDown = setInterval(function() {
@@ -107,10 +113,10 @@ var countDown = setInterval(function() {
 
     // If the count down is over, write some text
     if (seconds < 0) {
-        clearInterval(countDown);
+
         newQuestion()
         switchTurns()
-        document.getElementById("clock").innerHTML = "EXPIRED";
+        document.getElementById("clock").innerHTML = " ";
         // seconds = 4
         countDownTimer()
     }
