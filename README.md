@@ -8,6 +8,9 @@ Collect the points from answering the questions.
 #### How to Play:
 Two players take turns answering questions.
 
+Play Cupcake Pop Quiz <a href="https://vivianhuang130.github.io/WDI_Projects/">here.</a>
+
+
 ---
 
 ### Development & Technologies
